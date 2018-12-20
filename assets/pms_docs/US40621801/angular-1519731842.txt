@@ -1,0 +1,13 @@
+
+
+ANGULAR JS NOTES FRO SYNTAX USES:=
+
+1.ShowToast == This is for alertboxes and also checkboxes for animation.
+2.ShowToastext == This is for display in text alerts.(Showing notification for alerts)
+3.Payload == payload is request for angularjs
+4.$Scope == This is using for $scope variable 
+5.$rootScope == This is using for $rootScope
+6.baseFactory == This is using for controller for angular methodology
+
+
+

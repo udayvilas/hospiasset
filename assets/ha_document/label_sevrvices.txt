@@ -1,0 +1,109 @@
+Url Service:-
+
+Url :- http://hospiasset.com/hospiasset_new/mainadmin
+
+Request :- {"action":"get_hosp_urls"}
+
+Response:- {"response":"success","list":[{"ID":"8","ORG_ID":"ORG0000002","ORGNAME":"Care hospital","ORGURL":"http:\/\/www.carehospitals.com\/hospiasset\/","STATUS":"A","ORGLOGO":null},{"ID":"9","ORG_ID":"ORG0000001","ORGNAME":"Renown","ORGURL":"http:\/\/www.hospiasset.com\/hospiasset\/","STATUS":"A","ORGLOGO":null},{"ID":"10","ORG_ID":"ORG0000003","ORGNAME":"VENDOR","ORGURL":"http:\/\/missionhospiasset.com\/hospiasset\/","STATUS":"A","ORGLOGO":null},{"ID":"11","ORG_ID":"ORG0000004","ORGNAME":"EMRI","ORGURL":"http:\/\/hospiasset.com\/emri\/","STATUS":"A","ORGLOGO":null},{"ID":"12","ORG_ID":"ORG0000005","ORGNAME":"General","ORGURL":"http:\/\/missionhospiasset.com\/hospiasset_labels\/","STATUS":"A","ORGLOGO":null}]}
+
+
+Labels services 
+main_url :- http://missionhospiasset.com/general/
+
+
+
+
+headers:-
+Authorization : hat=HZsd16xzv3jsytNp87tk7Ygv73k8zMr0ekh6ly7mxAeYeh46Oe8
+
+Content-Type : application/json
+
+
+
+Login : - main_url+'auth'
+
+Request :- {"userem":"9000206002", "pswrd":"renown", "action":"login_user_check","lgn_type":"defaultlogin"}
+
+
+1.main_url+'user'
+
+Request :- {"org_id":"ORG0000001","action":"get_contract_type_list"}
+
+Response :- {"response":"success","list":[{"ID":"1","CTYPE":"Annual Maintenance Contract","CFORM":"AMC","ORG_MODULE":"","STATUS":"A"},{"ID":"2","CTYPE":"Commercial Maintenance Contract","CFORM":"CMC","ORG_MODULE":"","STATUS":"A"},{"ID":"3","CTYPE":"Warranty","CFORM":"WRT","ORG_MODULE":"","STATUS":"A"},{"ID":"4","CTYPE":"Rental","CFORM":"REN","ORG_MODULE":"","STATUS":"A"}],"labels":{"CON_ID":"2","MODULE_ID":"1","CONTRACT_TYPE":"Contact Type","CONTRACT_CODE":"Contact Code","STATUS":"Status","ACTION":"Action"}}
+
+2.main_url+'user'
+
+Request : -{"action":"get_incident_type_list","org_id":"ORG0000001"}
+
+Response:-{"response":"success","list":[{"ID":"9","ITYPE":"Damaged","ORG_MODULE":"","CODE":"DMD","STATUS":"A"},{"ID":"10","ITYPE":"Mismatched","ORG_MODULE":"","CODE":"MTD","STATUS":"A"}],"labels":{"ITYPE":"Incident Type","CODE":"Incident Code","STATUS":"Status","ACTION":"Action"}}
+
+3. main_url+'device'
+
+Request :- {"action":"get_equip_names","org_id":"ORG0000001"}
+
+Response :- {"response":"success","list":[{"ID":"477","NAME":"Laptop","ORG_MODULE":"","CODE":"LPT","EQ_TYPE":null,"STATUS":"A","PRIORITY":"High","priority":"-"},{"ID":"478","NAME":"Printer","ORG_MODULE":"","CODE":"PTR","EQ_TYPE":null,"STATUS":"A","PRIORITY":"1","priority":"High"},{"ID":"479","NAME":"QRPrniter","ORG_MODULE":"","CODE":"QPR","EQ_TYPE":null,"STATUS":"A","PRIORITY":"1","priority":"High"},{"ID":"480","NAME":"Scanner","ORG_MODULE":"","CODE":"SCR","EQ_TYPE":null,"STATUS":"A","PRIORITY":"1","priority":"High"}],"labels":{"NAME":"name1","EQ_TYPE":"","PRIORITY":"","STATUS":"status","ACTION":"action"}}
+
+4.main_url+'device'
+
+Request :- {"action":"get_equp_types","org_id":"ORG0000093"}
+
+Response :- {"response":"success","equip_types":[{"ID":"1","TYPE":"Information Technology","ORG_MODULE":"","CODE":"IFT","STATUS":"A"},{"ID":"2","TYPE":"Compurters","ORG_MODULE":"","CODE":"CMP","STATUS":"A"},{"ID":"3","TYPE":"Printer","ORG_MODULE":"","CODE":"PTR","STATUS":"A"},{"ID":"4","TYPE":"QR Printer","ORG_MODULE":"","CODE":"QPR","STATUS":"A"}],"labels":{"TYPE":"name","CODE":"code","STATUS":"status","ACTION":"action"}}
+
+
+5. main_url+'user'
+
+Request : - {"action":"get_status_list","org_id":"ORG0000093"}
+
+Response : - {"response":"success","list":[{"STATUS_ID":"1","ORG_ID":"","ORG_MODULE":"1","STATUS":"Equipment Status","SCODE":"Status Code","STATUSS":"Status","ACTION":"Action"},{"STATUS_ID":"7","ORG_ID":"","ORG_MODULE":"3","STATUS":"status","SCODE":"code","STATUSS":"status","ACTION":"action"},{"STATUS_ID":"8","ORG_ID":"","ORG_MODULE":"2","STATUS":"status","SCODE":"code","STATUSS":"status","ACTION":"action"},{"STATUS_ID":"9","ORG_ID":"ORG0000093","ORG_MODULE":"1","STATUS":"status","SCODE":"code","STATUSS":"stautues","ACTION":"action"}],"labels":{"STATUS":"status","SCODE":"code","STATUSS":"stautues","ACTION":"action"}}
+6.main_url+'basectrl'
+
+Request :- {"action":"get_dept_data","org_id":"ORG0000093"}
+
+Response :- {"list":[{"ID":"406","USER_DEPT_NAME":"Information Technology","ORG_MODULE":null,"CODE":"IFT","STATUS":"A"},{"ID":"407","USER_DEPT_NAME":"Accounting","ORG_MODULE":null,"CODE":"ACC","STATUS":"A"},{"ID":"408","USER_DEPT_NAME":"test","ORG_MODULE":null,"CODE":"TSS","STATUS":"A"},{"ID":"412","USER_DEPT_NAME":"DEP","ORG_MODULE":"1","CODE":"DEP","STATUS":"A"},{"ID":"413","USER_DEPT_NAME":"dep","ORG_MODULE":"1","CODE":"DES","STATUS":"A"}],"response":"success","labels":{"DEPT_ID":"5","ORG_ID":"ORG0000093","ORG_MODULE":"1","USER_DEPT_NAME":"name","CODE":"code","STATUS":"status","ACTION":"action"}}
+
+7. main_url+'user'
+
+Request :- {"action":"get_branch_users","org_id":"ORG0000093","role_code":"HMADMIN","branch_id":"All"}
+
+Response :- {"users":[{"USER_ID":"HA00001220","LEVEL":"L3","USER_NAME":"Purender","EMAIL_ID":"purender.renown@gmail.com","MOBILE_NO":"9603313175","ORG_ID":"ORG0000093","ORG_BRANCH_ID":null,"DEPT_CODE":null,"EMP_NO":"9603313175","ROLE_CODE":"HMADMIN","FEATURES_LIST":null,"END_DATE":"9999-10-12 10:57:25","STATUS":"A","ROLE_NAME":"-","BRANCH_NAMES":["-"]}],"labels":{"ID":"4","ORG_ID":"ORG0000093","ORG_MODULE":"1","USER_NAME":"user","EMAIL_ID":"email","EMP_NO":"contact","ROLE_NAME":"role","LEVEL":"level","BRANCH":"branch","STATUS":"status","ACTION":"action"},"response":"success"}
+
+8. main_url+'user'
+
+Request :- {"action":"get_branches_details","org_id":"ORG0000093"}
+
+Response : - {"response":"success","branches":[],"labels":{"BRANCH_ID":"2","ORG_MODULE":"1","ORG_ID":"ORG0000093","BRANCH_NAME":"branch","BRANCH_CODE":"email","USER_NAME":"hod","BRANCH_ADDRESS":"address","ADDED_ON":"added","STATUS":"status","ACTION":"action"}}
+
+9. main_url+'user'
+
+Request :- {"action":"get_levels_list","org_id":"ORG0000093"}
+
+Response :- {"response":"success","list":[{"ID":"1","LEVEL_NAME":"Level1","ORG_MODULE":"","LEVEL_CODE":"L1","STATUS":"A"},{"ID":"2","LEVEL_NAME":"Level2","ORG_MODULE":"","LEVEL_CODE":"L2","STATUS":"A"},{"ID":"3","LEVEL_NAME":"Level3","ORG_MODULE":"","LEVEL_CODE":"L3","STATUS":"A"},{"ID":"4","LEVEL_NAME":"Level4","ORG_MODULE":"","LEVEL_CODE":"L4","STATUS":"A"},{"ID":"5","LEVEL_NAME":"Level5","ORG_MODULE":"","LEVEL_CODE":"L5","STATUS":"A"}],"labels":{"LEVEL_ID":"5","ORG_ID":"ORG0000093","ORG_MODULE":"1","LEVEL_NAME":"level","LEVEL_CODE":"code","STATUS":"status","ACTION":"action"}}
+
+10.main_url+'user'
+
+Request :- {"action":"get_depreciation_list","org_id":"ORG0000093"}
+
+Response :- {"response":"success","list":[{"DEPC_ID":"1","NAME":"Moniter","ORG_MODULE":"","PERCENTAGE":"34","STATUS":"A"},{"DEPC_ID":"2","NAME":"Dell Laptop","ORG_MODULE":"","PERCENTAGE":"30","STATUS":"A"},{"DEPC_ID":"3","NAME":"keyboard","ORG_MODULE":"","PERCENTAGE":"40","STATUS":"A"},{"DEPC_ID":"7","NAME":"equipment","ORG_MODULE":"","PERCENTAGE":"67","STATUS":"A"},{"DEPC_ID":"8","NAME":"model","ORG_MODULE":"","PERCENTAGE":"20","STATUS":"A"},{"DEPC_ID":"9","NAME":"viewSonic","ORG_MODULE":"","PERCENTAGE":"30","STATUS":"A"},{"DEPC_ID":"10","NAME":"acer","ORG_MODULE":"","PERCENTAGE":"20","STATUS":"A"},{"DEPC_ID":"11","NAME":"kphb equipment","ORG_MODULE":"","PERCENTAGE":"35","STATUS":"A"},{"DEPC_ID":"12","NAME":"mon","ORG_MODULE":"","PERCENTAGE":"15","STATUS":"A"}],"labels":{"DEPR_ID":"4","ORG_ID":"ORG0000093","ORG_MODULE":"1","NAME":"deprciation","PERCENTAGE":"percentage","STATUS":"status","ACTION":"action"}}
+
+11.main_url+'user'
+
+Request:-{"action":"get_equp_cond","org_id":"ORG0000093"}
+Response : -{"response":"success","list":[{"ID":"26","ECODE":"REPLACED","ORG_MODULE":"","EVAL":"REP","STATUS":"I"},{"ID":"25","ECODE":"VERY GOOD","ORG_MODULE":"","EVAL":"VGD","STATUS":"A"},{"ID":"24","ECODE":"GOOD","ORG_MODULE":"","EVAL":"GOO","STATUS":"A"}],"labels":{"EVAL":"code","STATUS":"status","ACTION":"action"}}
+
+12. main_url+'device'
+Request :- {"action": "search_by_id","org_id":"ORG0000001","branch_id":"RA00000002","esid":"HYD-BME-0818-GB-HRD-LPT-0007"}
+Response :- {"response":"success","PMS_COUNT":null,"PMS_DONE":null,"PMS_DUE_DATE":null,"PMS_ACTL_DONE":null,"contract_details":{"ID":"4505","RID":null,"ORG_ID":"ORG0000001","BRANCH_ID":"RA00000002","EID":"HYD-BME-0818-GB-HRD-LPT-0007","AMC_VENDOR":"ORG0000084","AMC_TYPE":"Annual Maintenance Contract","AMC_VALUE":"5000","AMC_FROM":"1970-01-01","AMC_TO":"1970-01-01","ADDED_ON":"2018-09-17 16:46:18","ADDED_BY":null,"UPDATED_ON":null,"UPDATED_BY":null,"UPDATE_TYPE":"A","STATUS":"O","REMARKS":null,"vednor_details":[]},"QC_COUNT":null,"QC_DONE":null,"QC_DUE":null,"QC_ACTL_DONE":null,"device_details":{"ID":"1","ORG_ID":"ORG0000001","BRANCH_ID":"RA00000002","DEPT_ID":"HRD","E_ID":"HYD-BME-0818-GB-HRD-LPT-0007","ASSIGN_ID":"HYD-BME-0818-VB-HRD-LPT-0001","GENERAL_ASSET":"NO","NSP":null,"VSP":null,"NACC":null,"VACC":null,"NCON":null,"VCON":null,"USERNAME":"Prasad","E_NAME":"Dell Laptop","E_CAT":"477","E_TYPE":"IFT","ACCSSORIES":"Mouse,Charger","CRITICAL_SPARES":"cable","IMPORT_EID":null,"C_NAME":"MultiComputers","E_MODEL":"I7","ES_NUMBER":"dell12345","S_CONTACT":null,"SCO_NUMBER":null,"PONO":"123456","PDATE":"2018-08-15","UPLOAD_PATH":null,"DATEOF_INSTALL":"2018-08-20","E_COST":"50000","DISTRIBUTOR":"-","VENDOR":"ORG0000084","AMC_TYPE":null,"C_FROM":null,"C_TO":null,"AMC_VALUE":null,"UTILIZATION":"High","EQ_CONDATION":"Not Working","REMARKS":"Completed","QR_CODE":"http:\/\/chart.apis.google.com\/chart?chs=400x400&cht=qr&chl=HYD-BME-0818-GB-HRD-LPT-0007","USER_INSTALL":null,"FINISH_DATE":null,"USER_FINISH":null,"GRN_DATE":"2018-08-20","GRN_VALUE":"11122","BD_COUNT":null,"BD_COST":null,"LB_DATE":null,"EQ_CLASS":"1","E_COND":"GOOD","DESC_P":"inspiron i7 7th gen","MF_DATE":"07-2018","ORGINAL_ID":null,"RELOCATION_STATUS":"YES","BRANCH_RELOCATION":"RA00000001","FROM_OTHER_UNIT":null,"PHY_LOCATION":"5th floor","HOSPITAL_ASSET_CODE":null,"END_OF_LIFE":"7-2033","END_OF_SUPPORT":"07-2028","REPLACEMENT_ID":null,"REPLACEMENT_DATE":null,"REPLACEMENT_BY":null,"STATUS":"ACT","GATEPASS_ID":"0","SPARES_COUNT":"","ACCESSORIES_COUNT":"","ADDED_ON":null,"UPDATED_ON":null,"PDONE":"0000-00-00","PDUE":"0000-00-00","QDONE":"0000-00-00","QDUE":"0000-00-00","classification":"-"},"cms_details":{"response":"empty"},"history":[],"labels":{"DEVICE_ID":"1","ORG_MODULE":"1","ORG_ID":"ORG0000001","BRANCH_ID":"Branch","DEPT_ID":"Department","E_ID":"Equipment ID","USERNAME":"User Name","E_NAME":"Equipment Name","E_CAT":"Equipment Category","E_TYPE":"Equipment Type","ACCSSORIES":"Accssories","CRITICAL_SPARES":"critical","C_NAME":"Company Name","E_MODEL":"Equipment Model","ES_NUMBER":"Serial Number","PHY_LOCATION":"Physical Location","DESC_P":"Description","MF_DATE":"Manufacture Date","E_COND":"Equipment Condition","PONO":"PONO","PDATE":"PO Date","E_COST":"Equipment Cost","DISTRIBUTOR":"Distributor","VENDOR":"Vendor","DATEOF_INSTALL":"Date Of Install","GRN_DATE":"Grn Date","GRN_VALUE":"Grn Value","END_OF_LIFE":"End of Life","END_OF_SUPPORT":"End Of Support","REMARKS":"Remarks","EQ_CONDATION":""}}
+
+13.main_url+'user'
+Request :- {"action":"get_reasons_list","org_id":"ORG0000095"}
+Response :- 
+
+14.main_url+'user'
+Request :- {"action":"get_location_list","org_id":"ORG0000095"}
+Response:-
+
+15.main_url+'user'
+Request:- {"action":"get_utilization_list","org_id":"ORG0000093"}
+Response:-
+16.main_url+'user'
+Request:- {"action":"get_my_details","user_id":"HA00001224"}

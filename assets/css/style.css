@@ -1,0 +1,118 @@
+/* @font-face {
+    font-family: loginHeadFont;
+    src: url(../comme/Comme-Light.ttf);
+    font-weight: bold;
+} */
+.mega-link
+{
+	-webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+	display: block;
+	background:#fff;
+	width:29px;
+	height:29px;
+	text-align:center;
+	
+}
+.mega-link:hover
+{
+	background: linear-gradient(#ff6600, #f9c961);
+}
+.site_name
+{
+	//height:30px;
+	margin:0 auto;
+	font-family:'Roboto';
+	font-size:12px;
+	text-align:center;
+	color:#fff;
+	
+}
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+	color:#fff;
+	//font-size:12px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5accfc;
+    min-width: 190px;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+	margin-top: 10px;
+
+	
+}
+
+.dropdown-content a {
+    color: #000;
+    padding: 3px 18px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover 
+{
+	background: #614da4 !important;
+	color:#fff !important;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+/* .dropdown-content:hover{
+	background:#000
+	
+}
+ */
+ 
+ 
+ /******************************  header  and home *****************************************/
+ .show_butt
+ {
+	  margin-top: 114%;
+	  margin-left: 22%;
+ }
+.bname
+{
+	//margin-left:-295px;
+	color:#fff;
+}
+label
+{
+	font-size:15px;
+}
+.date-width
+{
+	padding-left:0px;
+	width:23%;
+}
+.label-mrg
+{
+	margin-right:-7%;
+}
+.td-class1{
+	width:8%;
+}
+.td-class2{
+	width:6%;
+}
+.textcenter
+{
+	text-align:center;
+	font-weifgt:bold;
+}
+
+
+
