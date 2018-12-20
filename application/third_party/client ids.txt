@@ -1,0 +1,8 @@
+Google IDS
+Here is your client ID:416332670282-1trq4pt80hf02cbi48igotilg97ghdtn.apps.googleusercontent.com
+Here is your client secret:hqwM0UkFFYzWYcz1rSFhhyX_,
+/**********************/
+FaceBook App ID: 826735917458949
+Linkdin : 
+Client ID :751ti16xunsdv1
+Client Secret ID:63VmoYhhVNcHtKbm
